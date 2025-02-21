@@ -25,6 +25,7 @@ function updateScoreElement() {
 			}*/
 
 function playGame(playerMove) {
+	clickSound.play();
 	playerMove = playerMove.toLowerCase();
 	const computerMove = pickcomputerMove();
 
@@ -64,6 +65,14 @@ function playGame(playerMove) {
 		score.ties++;
 	}
 
+	if (result === "You win!") {
+		winSound.play();
+	} else if (result === "You lose!") {
+		loseSound.play();
+	} else if (result === "Tie!") {
+		tieSound();
+	}
+
 	localStorage.setItem("score", JSON.stringify(score));
 
 	updateScoreElement();
@@ -82,7 +91,7 @@ function pickcomputerMove() {
 	if (randomNumber >= 0 && randomNumber < 1 / 3) {
 		computerMove = "rock";
 	} else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-		computerMove = "aper";
+		computerMove = "paper";
 	} else if (randomNumber >= 2 / 3 && randomNumber < 1) {
 		computerMove = "scissors";
 	}
