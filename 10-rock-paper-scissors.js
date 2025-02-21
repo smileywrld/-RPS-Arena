@@ -1,3 +1,7 @@
+const clickSound = new Audio("sounds/click-sound.mp3");
+const loseSound = new Audio("sounds/lose-sound.mp3");
+const tieSound = new Audio("sounds/tie-sound.mp3");
+const winSound = new Audio("sounds/win-sound.mp3");
 let score = JSON.parse(localStorage.getItem("score")) || {
 	wins: 0,
 	losses: 0,
