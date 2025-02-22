@@ -20,7 +20,7 @@ function updateScoreElement() {
 			 	score = {
 			 		wins: 0,
 			 		losses: 0,
-			 		ties: 0,m
+			 		ties: 0,
 			};
 			}*/
 
@@ -70,7 +70,7 @@ function playGame(playerMove) {
 	} else if (result === "You lose!") {
 		loseSound.play();
 	} else if (result === "Tie!") {
-		tieSound();
+		tieSound.play();
 	}
 
 	localStorage.setItem("score", JSON.stringify(score));
