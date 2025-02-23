@@ -3,17 +3,20 @@ const loseSound = new Audio("sounds/lose-sound.mp3");
 const tieSound = new Audio("sounds/tie-sound.mp3");
 const winSound = new Audio("sounds/win-sound.mp3");
 
+// Theme Toggler
 let toggleBtn = document.querySelector(".toggle-btn");
 
 toggleBtn.addEventListener("click", () => {
 	document.body.classList.toggle("light-mode");
+	if (document.body.classList.contains("light-mode")) {
+		toggleBtn.innerHTML = "Dark Mode";
+	} else {
+		toggleBtn.innerHTML = "Light Mode";
+	}
 });
 
-if (document.body.classList.contains("light-mode")) {
-	toggleBtn.innerHTML = "Dark Mode";
-} else {
-	toggleBtn.innerHTML = "Light Mode";
-}
+// Theme Toggler
+
 let score = JSON.parse(localStorage.getItem("score")) || {
 	wins: 0,
 	losses: 0,

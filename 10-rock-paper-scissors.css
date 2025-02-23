@@ -19,6 +19,15 @@ body {
 	height: 50px;
 }
 
+.btns{
+	border: groove;
+	background-color: white;
+	font-size: 15px;
+	padding: 8px 15px;
+	cursor: pointer;
+
+}
+
 .move-btn {
 	background-color: transparent;
 	border: 3px solid white;
@@ -38,10 +47,10 @@ body {
 	margin-top: 60px;
 }
 
-.reset-score-button {
+/* .reset-score-button {
 	border: none;
 	background-color: white;
 	font-size: 15px;
 	padding: 8px 15px;
 	cursor: pointer;
-}
+} */
