@@ -2,6 +2,18 @@ const clickSound = new Audio("sounds/click-sound.mp3");
 const loseSound = new Audio("sounds/lose-sound.mp3");
 const tieSound = new Audio("sounds/tie-sound.mp3");
 const winSound = new Audio("sounds/win-sound.mp3");
+
+let toggleBtn = document.querySelector(".toggle-btn");
+
+toggleBtn.addEventListener("click", () => {
+	document.body.classList.toggle("light-mode");
+});
+
+if (document.body.classList.contains("light-mode")) {
+	toggleBtn.innerHTML = "Dark Mode";
+} else {
+	toggleBtn.innerHTML = "Light Mode";
+}
 let score = JSON.parse(localStorage.getItem("score")) || {
 	wins: 0,
 	losses: 0,

@@ -2,6 +2,12 @@ body {
 	background-color: rgb(25, 25, 25);
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+	background-color: white;
+	color: black;
 }
 
 .title {
